@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Medidas absolutas
+            cm = centimetro;
+            mm = milimetro;
+            in = polegada;
+            px = pixel;
+            pt = ponto;
+            pc = paica;
+            Medidas relativas
+            em = tamanho da fonte;
+            ex = tamanho da altura x da fonte;
+            rem = relativo ao root, fonte configurada no body;
+            vw = porcentagem da largura da view port;
+            % = altura da view port;
+            16px geralmente é igual a 1em*/
+            font-size: 1em;
+            font-weight: lighter;
+            font-style: italic;
+            text-decoration: underline;
+            /*weight=peso , widht=largura, height=altura*/
+        }
+
+        h1 {
+            /* shorthand font
+            - font-syle -> font-weight -> font-size -> font-family
+
+            font-family: 'work Sans', sans-serif;
+            font-size: 3em;
+            font-weight: bolder;
+            font-style: italic;
+            */
+            font: italic bolder 3em 'work Sans', sans-serif;
+        }
+
+        h2 {
+            font: bold 2em 'work Sans';
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae dignissimos minima quod hic culpa consequuntur ex repudiandae quos natus aperiam molestiae earum saepe, similique suscipit neque delectus corrupti libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quam labore officiis libero, tempora nobis alias minus dolores, sequi vitae necessitatibus itaque ab beatae autem nam optio architecto dicta fugit?</p>
+    <h2>Subtítulo de exercício</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem officia blanditiis, nesciunt nemo suscipit adipisci? Hic, maiores deleniti? Natus voluptate possimus aspernatur sed minima praesentium reiciendis omnis aliquid consectetur maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis inventore incidunt dicta perferendis esse ut ab maxime itaque exercitationem? Culpa laboriosam quidem modi? Iste reprehenderit eos velit nobis necessitatibus ratione.</p>
+
+</body>
+</html>

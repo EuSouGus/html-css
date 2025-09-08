@@ -1,0 +1,190 @@
+@charset "UTF-8"
+/* Cores Futuristas Azuis */
+        :root {
+            --dark-blue: #0A192F;
+            --medium-blue: #172A45;
+            --light-blue: #64FFDA; /* Destaque, pode ser alterado para um azul mais forte se preferir */
+            --text-color: #CCD6F6;
+            --subtle-gray: #8892B0;
+            --border-glow: rgba(100, 255, 218, 0.4); /* Glow para bordas */
+        }
+
+        /* Estilos CSS para o layout */
+        body {
+            font-family: 'Roboto', sans-serif; /* Fonte mais legível para o corpo */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--medium-blue);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px var(--dark-blue), 0 0 60px var(--border-glow); /* Sombra mais intensa e glow */
+            border: 1px solid var(--border-glow); /* Borda sutil com glow */
+            overflow: hidden; /* Para garantir que o glow não vaze */
+            position: relative;
+        }
+
+        /* Efeito de grade sutil no fundo (opcional, pode ser pesado para alguns navegadores) */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(0deg, transparent 24%, var(--dark-blue) 25%, var(--dark-blue) 26%, transparent 27%, transparent 74%, var(--dark-blue) 75%, var(--dark-blue) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, var(--dark-blue) 25%, var(--dark-blue) 26%, transparent 27%, transparent 74%, var(--dark-blue) 75%, var(--dark-blue) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            color: var(--light-blue);
+            font-family: 'Orbitron', sans-serif; /* Fonte futurista para o nome */
+            font-size: 3em;
+            text-shadow: 0 0 10px var(--light-blue); /* Efeito de brilho no texto */
+        }
+        header p {
+            margin: 5px 0 0;
+            color: var(--subtle-gray);
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: var(--light-blue);
+            font-weight: 700;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: white;
+            text-shadow: 0 0 8px var(--light-blue);
+        }
+        .section {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(100, 255, 218, 0.2); /* Borda mais sutil */
+            position: relative;
+            z-index: 1;
+        }
+        .section h2 {
+            color: var(--light-blue);
+            font-family: 'Orbitron', sans-serif;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 12px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid rgba(100, 255, 218, 0.4); /* Linha vertical de destaque */
+        }
+        .experience-item h3, .education-item h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--text-color);
+        }
+        .experience-item p, .education-item p {
+            margin: 5px 0;
+            font-style: italic;
+            color: var(--subtle-gray);
+            font-size: 0.95em;
+        }
+        .experience-item ul, .education-item ul {
+            margin-top: 10px;
+            list-style: disc; /* Voltar para bolinhas para clareza em listas */
+            margin-left: 20px;
+        }
+        .experience-item ul li::marker {
+            color: var(--light-blue); /* Cor das bolinhas */
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skill-tag {
+            background-color: var(--dark-blue);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.95em;
+            color: var(--light-blue);
+            border: 1px solid rgba(100, 255, 218, 0.4);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .skill-tag:hover {
+            background-color: var(--light-blue);
+            color: var(--dark-blue);
+            transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .section h2 {
+                font-size: 1.4em;
+            }
+            .experience-item h3, .education-item h3 {
+                font-size: 1.2em;
+            }
+        }

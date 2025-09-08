@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de mídia</title>
+</head>
+<body>
+    <h1>Exemplos de mídia</h1>
+    <h2>Imagens dinamicas</h2>
+    <p>Tente abrir esse site em dispositivos com telas de tamanhos diferentes para ver como as imagens se adaptam:</p>
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/Combo-200.jpg" type="image/jpg">
+        <source media="(max-width:1050px)" srcset="imagens/Combo-700.jpg" type="image/jpg">
+        <img src="imagens/Combo-1000.jpg" alt="imagem-combo">
+    </picture>
+    <h2>Reproduzindo audio</h2>
+    <p>Vamos aprender a reproduzir audio em HTML5</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/Nebula-TheGreyRoom_Density&Time.mp3" type="audio/mpeg">
+        <source src="midia/Nebula-TheGreyRoom_Density&Time.mp3" type="audio/ogg">
+        <source src="midia/Nebula-TheGreyRoom_Density&Time.mp3" type="audio/wav">
+        <p>Infelizmente o seu navegador não consegue baixar audio. <a href="midia/Nebula-TheGreyRoom_Density&Time.mp3">Clique aqui</a> para baixar o audio</p>
+    </audio>
+</body>
+</html>

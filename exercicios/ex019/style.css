@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*
+    em HTML é id | em CSS é # (só pode um elemento)
+    em GTML é class | em CSS é . (pode vários elementos)
+*/
+
+body {
+    background-color: rgb(155, 255, 208);
+}
+
+h1 {
+    color: rgb(0, 33, 118);
+} 
+
+h1#principal {
+    text-align: center;
+    background-color: #0106a1;
+    color:rgb(155, 255, 208);
+}
+
+h2 {
+    color: rgb(49, 100, 194);
+}
+ 
+.basico {
+    color: #64b664;
+}
+
+.intermediario {
+    color: #c2c256;
+}
+
+.avancado {
+    color: #b04949;
+}
+
+.destaque {
+    background-color: #a5e6f3;
+}
